@@ -58,7 +58,7 @@ server.servlet.context-path=/api
 # app properties
 rest.connect-timeout.millis=500
 api.voucher-provision.endpoint=http://localhost:8081/api/v1/provision
-api.voucher-provision.timeout-seconds=5
+api.voucher-provision.timeout-seconds=30
 ```
 
 voucher-provision-service/src/main/resources/application.properties
@@ -67,8 +67,8 @@ server.port=8081
 server.servlet.context-path=/api
 
 # app properties
-simulation.api.min-response-time.seconds=1
-simulation.api.max-response-time.seconds=6
+simulation.api.min-response-time-seconds=3
+simulation.api.max-response-time-seconds=120
 ```
 
 ### Implemented operations:

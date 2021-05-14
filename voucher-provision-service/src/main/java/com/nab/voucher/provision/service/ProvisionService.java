@@ -17,9 +17,9 @@ public class ProvisionService {
 
     private static final Logger log = LoggerFactory.getLogger(ProvisionService.class);
 
-    @Value("${simulation.api.min-response-time.seconds}")
+    @Value("${simulation.api.min-response-time-seconds}")
     int minResponseTime;
-    @Value("${simulation.api.max-response-time.seconds}")
+    @Value("${simulation.api.max-response-time-seconds}")
     int maxResponseTime;
 
     public Voucher generateVoucher(VoucherGenRequest request) {
