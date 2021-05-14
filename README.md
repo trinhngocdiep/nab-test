@@ -38,6 +38,10 @@ We are using H2 in memory database with just 1 table - `voucher_order`:
 - status (varchar)
 
 ## How to run
+Dependencies:
+* jdk 11 or above
+* maven
+
 From root folder, run below commands
 ```
 cd voucher-provision-service
@@ -72,7 +76,7 @@ simulation.api.max-response-time-seconds=120
 ```
 
 ### Implemented operations:
-##### Purchase new voucher
+#### Purchase new voucher
 
 Request:
 ```bash
@@ -100,7 +104,7 @@ Response, when 3rd party api takes longer than `api.voucher-provision.timeout-se
 }
 ```
 
-##### Authenticate customers with OTP via SMS.
+#### Authenticate customers with OTP via SMS.
 Note that we are not actually generating or validating OTP, this is only to demonstrate the workflow.
 
 For demo purpose, token generated after successful authentication is simply the given phone number.
@@ -137,7 +141,7 @@ Response:
 }
 ```
 
-##### Display purchase history
+#### Display purchase history
 Needs to be authenticated with `Authorization` header. 
 
 The token can be obtained from `Validate OTP`, or simply (demo only) `Bearer <phone number>`. 
@@ -171,3 +175,8 @@ Response:
     }
 ]
 ```
+
+### Missing features
+* Request tracing
+* Retry if voucher issuance fail
+* Integrate with OTP/SMS services

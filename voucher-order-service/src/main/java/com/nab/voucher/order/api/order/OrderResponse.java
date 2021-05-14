@@ -1,8 +1,8 @@
 package com.nab.voucher.order.api.order;
 
 public class OrderResponse {
-    private String voucherCode;
-    private String message;
+    private final String voucherCode;
+    private final String message;
 
     public String getVoucherCode() {
         return voucherCode;

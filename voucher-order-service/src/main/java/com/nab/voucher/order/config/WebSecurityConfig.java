@@ -43,11 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .authenticationEntryPoint((request, response, authException) -> {
                     response.sendError(HttpServletResponse.SC_UNAUTHORIZED, authException.getMessage());
-                })
-                .and()
-                .authorizeRequests()
-                .antMatchers("/order-history/**").authenticated()
-                .anyRequest().permitAll();
+                });
     }
 
     @Override

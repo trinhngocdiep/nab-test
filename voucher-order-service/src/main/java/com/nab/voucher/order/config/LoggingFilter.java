@@ -22,7 +22,8 @@ public class LoggingFilter extends OncePerRequestFilter {
         try {
             chain.doFilter(request, response);
         } finally {
-            log.info("Request [{}]{} completed in {} ms.", request.getMethod(), request.getRequestURI(), System.currentTimeMillis() - startTime);
+            log.info("Request [{}]{} completed in {} ms. Status: {}", request.getMethod(), request.getRequestURI(),
+                    System.currentTimeMillis() - startTime, response.getStatus());
         }
     }
 }
