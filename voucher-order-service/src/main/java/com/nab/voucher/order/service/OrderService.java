@@ -18,7 +18,7 @@ public class OrderService {
 
     private static final Logger log = LoggerFactory.getLogger(OrderService.class);
 
-    @Value("${api.voucher.timeout.seconds}")
+    @Value("${api.voucher-provision.timeout-seconds}")
     int timeoutSeconds;
 
     private final VoucherOrderRepository orderRepository;

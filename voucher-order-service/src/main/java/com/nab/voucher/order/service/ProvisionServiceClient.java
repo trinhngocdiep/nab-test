@@ -12,7 +12,7 @@ import java.util.Map;
 @Service
 public class ProvisionServiceClient {
 
-    @Value("${api.voucher.provision-service-url}")
+    @Value("${api.voucher-provision.endpoint}")
     String provisionServiceUrl;
 
     private final RestTemplate restTemplate;
