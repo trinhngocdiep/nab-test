@@ -10,14 +10,8 @@ import java.util.Collections;
 @Service
 public class AuthService {
 
-    private final NotificationService notificationService;
-
-    public AuthService(NotificationService notificationService) {
-        this.notificationService = notificationService;
-    }
-
-    public void generateOtp(String phoneNumber) {
-        notificationService.sendOtp(phoneNumber, phoneNumber);
+    public String generateOtp(String phoneNumber) {
+        return phoneNumber;
     }
 
     public User findUser(String phoneNumber) {
@@ -35,6 +29,4 @@ public class AuthService {
         return null;
     }
 
-    public void logout() {
-    }
 }

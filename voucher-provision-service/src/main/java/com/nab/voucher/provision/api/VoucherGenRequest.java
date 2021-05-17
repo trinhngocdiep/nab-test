@@ -8,8 +8,8 @@ public class VoucherGenRequest {
     @NotBlank
     private String telco;
 
-    @Min(0)
-    @Max(500_000)
+    @Min(10_000)
+    @Max(1_000_000)
     private int value;
 
     public String getTelco() {

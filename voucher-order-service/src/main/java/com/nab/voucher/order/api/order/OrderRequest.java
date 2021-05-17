@@ -12,7 +12,7 @@ public class OrderRequest {
     @NotNull
     private String phoneNumber;
 
-    @Min(1000)
+    @Min(10_000)
     @Max(1_000_000)
     private int value;
 
